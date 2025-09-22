@@ -197,6 +197,20 @@ form button:hover {
   margin-bottom: 15px;
 }
 
+footer {
+  margin-top: 30px;
+  padding: 14px 18px;
+  background: black;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
 
 
 /* === Responsive === */
