@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>User Manager</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+        </nav>
+        
+    </header>
+
+    <main>
+         <h2>User Details</h2>
+         <input type="text" id="search" placeholder="Search users...">
+        <!-- Table -->
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Lang</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filled by JS -->
+            </tbody>
+        </table>
+        <!-- Form -->
+        <h2>Add / Edit User</h2>
+        <form id="userForm">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                required>
+            <input type="tel" id="phone" placeholder="10 digit phone" pattern="\d{10}" required>
+            <select id="language">
+                <option value="English">English</option>
+                <option value="Gujrati">Gujrati</option>
+                 <option value="Hindi">Hindi</option>
+                <option value="Marathi">Marathi</option>
+            </select>
+            <button type="submit">Save</button>
+        </form>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                The User Manager app is a simple demo project that shows how to build a CRUD
+                (Create, Read, Update, Delete) system using only HTML, CSS, and JavaScript.
+            </p>
+            <p>
+                It lets you add new users, edit their information, delete users, and search
+                through the list quickly. All the data is stored in your browser’s LocalStorage,
+                so even if you refresh the page, your user list is saved.
+            </p>
+            <p>
+                This project is a great way to practice important web development concepts like
+                form handling, table rendering, JavaScript validation, and responsive design.
+            </p>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

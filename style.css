@@ -1,0 +1,222 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* === Header === */
+header {
+  background: #1c1c1d;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 40px;
+  transition: 0.3s;
+}
+
+header nav a:first-child {
+  margin-left: 0;
+}
+
+header nav a:hover {
+  color: #ffdd57;
+}
+
+/* === Main Layout === */
+main {
+  max-width: 900px;
+  margin: auto;}
+main h2 {
+  text-align: center;
+  margin: 20px 0;
+  color: #000000;
+}
+/* === Search Bar === */
+#search {
+  width: 100%;
+  max-width: 400px;        /* limit width */
+  padding: 10px 15px;
+  margin: 20px auto;       /* space around + center */
+  display: block;          /* makes it center with margin auto */
+  border: 2px solid #000000;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#search:focus {
+  border-color: #0056b3;   /* darker blue when focused */
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+
+
+/* === User Table === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+thead {
+  background:  #1c1c1d;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  border: 1px solid #f1f3f5;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tbody tr:hover {
+  background: #eaf4ff;
+}
+
+/* Action buttons */
+.actions button {
+  margin-right: 5px;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.actions .edit {
+  background: #94af9b;
+  color: white;
+}
+
+.actions .delete {
+  background: #dc3545;
+  color: white;
+}
+
+.actions button:hover {
+  opacity: 0.85;
+}
+
+/* === Form === */
+form {
+  background: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #000000;
+}
+
+form button {
+  grid-column: span 2;
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+/* === About Section === */
+#about {
+  max-width: 800px;         /* width of the box */
+  margin: 40px auto;        /* center horizontally + spacing from top/bottom */
+  padding: 20px 30px;
+  border: 2px solid #0b0b0b; /* blue border */
+  border-radius: 8px;        /* rounded corners */
+  background: #f9f9f9;       /* light background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  text-align: center;        /* center h2 */
+}
+
+#about h2 {
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+#about p {
+  text-align: justify;       /* justify paragraph text */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav a {
+    margin-left: 20px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+
